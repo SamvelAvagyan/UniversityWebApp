@@ -1,14 +1,8 @@
-﻿using System;
-
-namespace Repository.Models
+﻿namespace Repository.Models
 {
-    public class Teacher
+    public class Teacher : BaseModel
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public DateTime CreatedOn { get; set; }
-        public DateTime ModifiedOn { get; set; }
-        public bool Active { get; set; }
     }
 }
