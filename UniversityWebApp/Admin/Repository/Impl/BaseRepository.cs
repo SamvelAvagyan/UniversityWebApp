@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Repository.Repositories
+namespace Repository.Impl
 {
     public class BaseRepository<T> : IBaseRepository<T>
         where T : BaseModel
