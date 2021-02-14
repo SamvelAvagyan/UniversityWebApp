@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Source\\Repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\Admin.csproj": {}
+    "C:\\Users\\Acer\\source\\repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\Admin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Source\\Repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\Admin.csproj": {
+    "C:\\Users\\Acer\\source\\repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\Admin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Source\\Repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\Admin.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\source\\repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\Admin.csproj",
         "projectName": "Admin",
-        "projectPath": "C:\\Users\\Acer\\Source\\Repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\Admin.csproj",
+        "projectPath": "C:\\Users\\Acer\\source\\repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\Admin.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Source\\Repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\source\\repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,8 +31,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Acer\\Source\\Repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Repository\\Repository.csproj": {
-                "projectPath": "C:\\Users\\Acer\\Source\\Repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Repository\\Repository.csproj"
+              "C:\\Users\\Acer\\source\\repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\Acer\\source\\repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Repository\\Repository.csproj"
               }
             }
           }

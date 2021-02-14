@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "45Y0YopVafhAitsw458U9r95JtOkX3J90Ay4dQTcZJZkb28z5Zk88QmDHI0AO8jyVB9NK4ILZmOyxLRpk4lxIA==",
+  "dgSpecHash": "pIB5bgD19P7d2Y7E82r3NpGDP+5nKqTYDFuObbVUwoXPv7udhhZpnTVMY525R/OXTTeHDSouXA1l4PhpbfNzKg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\Source\\Repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\Admin.csproj",
+  "projectFilePath": "C:\\Users\\Acer\\source\\repos\\UniversityWebApp\\UniversityWebApp\\Admin\\Admin\\Admin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
