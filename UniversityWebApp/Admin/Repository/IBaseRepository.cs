@@ -6,8 +6,8 @@ namespace Repository
     public interface IBaseRepository<T>
     {
         Task<IQueryable<T>> GetAllAsync();
-        void AddAsync(T model);
-        void DeleteAsync(int id);
-        void UpdateAsync(T model);
+        Task AddAsync(T model);
+        Task DeleteAsync(int id);
+        Task UpdateAsync(T model);
     }
 }

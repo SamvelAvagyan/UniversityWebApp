@@ -15,13 +15,13 @@ namespace Repository.Repositories
             this.dbContext = dbContext;
         }
 
-        public async void AddAsync(T model)
+        public async Task AddAsync(T model)
         {
             dbContext.Set<T>().Add(model);
             await dbContext.SaveChangesAsync();
         }
 
-        public async void DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
             dbContext.Set<T>().Find(id).Active = false;
             await dbContext.SaveChangesAsync();
@@ -35,7 +35,7 @@ namespace Repository.Repositories
             });
         }
 
-        public async void UpdateAsync(T model)
+        public async Task UpdateAsync(T model)
         {
             model.ModifiedOn = DateTime.Now;
             dbContext.Set<T>().Update(model);
