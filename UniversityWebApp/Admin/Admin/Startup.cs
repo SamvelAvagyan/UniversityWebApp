@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Repository;
+using Repository.Impl;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace Admin
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<DbContext, UniversityDbContext>(con => con.UseSqlServer(Configuration.GetConnectionString("Local")));
+            services.AddRepository(Configuration.GetConnectionString("Local"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
