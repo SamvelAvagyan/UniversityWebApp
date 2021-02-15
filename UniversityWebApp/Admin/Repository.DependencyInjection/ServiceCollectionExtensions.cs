@@ -8,7 +8,8 @@ namespace Microsoft.Extensions.DependencyInjection
     {
         public static IServiceCollection AddDbContext(this IServiceCollection services, string connectionString)
         {
-            services.AddDbContext<DbContext, UniversityDbContext>(con => con.UseSqlServer(connectionString));
+            services.AddDbContext<UniversityDbContext>(con => con.UseSqlServer(connectionString));
+            services.AddScoped<DbContext, UniversityDbContext>();
             return services;
         }
 

@@ -1,0 +1,12 @@
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\bin\Debug\netcoreapp3.1\Repository.DependencyInjection.deps.json
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\bin\Debug\netcoreapp3.1\Repository.DependencyInjection.dll
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\bin\Debug\netcoreapp3.1\Repository.DependencyInjection.pdb
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\bin\Debug\netcoreapp3.1\Repository.dll
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\bin\Debug\netcoreapp3.1\Repository.pdb
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\obj\Debug\netcoreapp3.1\Repository.DependencyInjection.csprojAssemblyReference.cache
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\obj\Debug\netcoreapp3.1\Repository.DependencyInjection.AssemblyInfoInputs.cache
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\obj\Debug\netcoreapp3.1\Repository.DependencyInjection.AssemblyInfo.cs
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\obj\Debug\netcoreapp3.1\Repository.DependencyInjection.csproj.CoreCompileInputs.cache
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\obj\Debug\netcoreapp3.1\Repository.DependencyInjection.csproj.CopyComplete
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\obj\Debug\netcoreapp3.1\Repository.DependencyInjection.dll
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Repository.DependencyInjection\obj\Debug\netcoreapp3.1\Repository.DependencyInjection.pdb

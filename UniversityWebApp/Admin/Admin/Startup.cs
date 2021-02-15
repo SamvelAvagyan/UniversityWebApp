@@ -27,6 +27,7 @@ namespace Admin
         {
             services.AddControllersWithViews();
             services.AddRepository(Configuration.GetConnectionString("Local"));
+            services.AddDbContext(Configuration.GetConnectionString("Local"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,7 +39,7 @@ namespace Admin
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                app.UseExceptionHandler("/Student/Error");
             }
             app.UseStaticFiles();
 
@@ -50,7 +51,7 @@ namespace Admin
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Student}/{action=Index}/{id?}");
             });
         }
     }
