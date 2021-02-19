@@ -27,6 +27,14 @@ namespace Repository.Impl
             await dbContext.SaveChangesAsync();
         }
 
+        public async Task<IQueryable<T>> GetActivesAsync()
+        {
+            return await Task.Run(() =>
+            {
+                return dbContext.Set<T>().Where(t => t.Active);
+            });
+        }
+
         public async Task<IQueryable<T>> GetAllAsync()
         {
             return await Task.Run(() =>
@@ -35,9 +43,18 @@ namespace Repository.Impl
             });
         }
 
+        public async Task<T> GetByIdAsync(int id)
+        {
+            return await Task.Run(() =>
+            {
+                return dbContext.Set<T>().Find(id);
+            });
+        }
+
         public async Task UpdateAsync(T model)
         {
             model.ModifiedOn = DateTime.Now;
+            model.Active = true;
             dbContext.Set<T>().Update(model);
             await dbContext.SaveChangesAsync();
         }

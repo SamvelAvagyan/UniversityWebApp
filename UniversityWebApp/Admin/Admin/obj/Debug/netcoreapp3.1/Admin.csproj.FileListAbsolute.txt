@@ -153,3 +153,4 @@ C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Admin\bin\Deb
 C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Admin\bin\Debug\netcoreapp3.1\Repository.DependencyInjection.pdb
 C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Admin\obj\Debug\netcoreapp3.1\Razor\Views\Student\Index.cshtml.g.cs
 C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Admin\obj\Debug\netcoreapp3.1\Razor\Views\Student\Create.cshtml.g.cs
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Admin\obj\Debug\netcoreapp3.1\Razor\Views\Student\Edit.cshtml.g.cs

@@ -18,7 +18,7 @@ namespace Admin.Controllers
         // GET: StudentController
         public async Task<ActionResult> Index()
         {
-            return View(await studentRepository.GetAllAsync());
+            return View(await studentRepository.GetActivesAsync());
         }
 
         // GET: StudentController/Details/5
@@ -50,18 +50,19 @@ namespace Admin.Controllers
         }
 
         // GET: StudentController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            return View(await studentRepository.GetByIdAsync(id));
         }
 
         // POST: StudentController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(Student st, IFormCollection collection)
         {
             try
             {
+                await studentRepository.UpdateAsync(st);
                 return RedirectToAction(nameof(Index));
             }
             catch
