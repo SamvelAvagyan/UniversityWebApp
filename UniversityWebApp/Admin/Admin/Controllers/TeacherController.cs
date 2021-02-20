@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Repository;
+using Repository.Models;
 using System.Threading.Tasks;
 
 namespace Admin.Controllers
@@ -35,10 +36,11 @@ namespace Admin.Controllers
         // POST: TeacherController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create(IFormCollection collection, Teacher t)
         {
             try
             {
+                await teacherRepository.AddAsync(t);
                 return RedirectToAction(nameof(Index));
             }
             catch
