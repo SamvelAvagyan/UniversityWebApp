@@ -50,18 +50,19 @@ namespace Admin.Controllers
         }
 
         // GET: TeacherController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            return View(await teacherRepository.GetByIdAsync(id));
         }
 
         // POST: TeacherController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(Teacher teacher, IFormCollection collection)
         {
             try
             {
+                await teacherRepository.UpdateAsync(teacher);
                 return RedirectToAction(nameof(Index));
             }
             catch
