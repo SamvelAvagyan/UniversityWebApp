@@ -75,18 +75,19 @@ namespace Admin.Controllers
         }
 
         // GET: UniversityController/Delete/5
-        public ActionResult Delete(int id)
+        public async Task<ActionResult> Delete(int id)
         {
-            return View();
+            return View(await universityRepository.GetByIdAsync(id));
         }
 
         // POST: UniversityController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public async Task<ActionResult> Delete(int id, IFormCollection collection)
         {
             try
             {
+                await universityRepository.DeleteAsync(id);
                 return RedirectToAction(nameof(Index));
             }
             catch

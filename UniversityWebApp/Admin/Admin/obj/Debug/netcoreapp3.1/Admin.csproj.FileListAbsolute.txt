@@ -164,3 +164,4 @@ C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Admin\obj\Deb
 C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Admin\obj\Debug\netcoreapp3.1\Razor\Views\University\Index.cshtml.g.cs
 C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Admin\obj\Debug\netcoreapp3.1\Razor\Views\University\Create.cshtml.g.cs
 C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Admin\obj\Debug\netcoreapp3.1\Razor\Views\University\Edit.cshtml.g.cs
+C:\Users\Acer\source\repos\UniversityWebApp\UniversityWebApp\Admin\Admin\obj\Debug\netcoreapp3.1\Razor\Views\University\Delete.cshtml.g.cs
