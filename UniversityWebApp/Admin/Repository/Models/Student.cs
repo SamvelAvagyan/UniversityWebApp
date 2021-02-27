@@ -1,4 +1,6 @@
-﻿namespace Repository.Models
+﻿using System.Collections.Generic;
+
+namespace Repository.Models
 {
     public class Student : BaseModel
     {
@@ -16,5 +18,8 @@
                 }
             }
         }
+
+        public int? UniversityId { get; set; }
+        public University University { get; set; }
     }
 }
