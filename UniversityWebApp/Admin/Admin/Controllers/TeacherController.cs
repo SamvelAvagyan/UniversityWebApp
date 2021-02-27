@@ -22,9 +22,9 @@ namespace Admin.Controllers
         }
 
         // GET: TeacherController/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
-            return View();
+            return View(await teacherRepository.GetByIdAsync(id));
         }
 
         // GET: TeacherController/Create
