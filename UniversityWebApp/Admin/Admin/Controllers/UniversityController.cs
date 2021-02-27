@@ -25,9 +25,9 @@ namespace Admin.Controllers
         }
 
         // GET: UniversityController/Details/5
-        public ActionResult Details(int id)
+        public async Task<ActionResult> Details(int id)
         {
-            return View();
+            return View(await universityRepository.GetByIdAsync(id));
         }
 
         // GET: UniversityController/Create
