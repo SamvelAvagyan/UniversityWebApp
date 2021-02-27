@@ -53,18 +53,19 @@ namespace Admin.Controllers
         }
 
         // GET: UniversityController/Edit/5
-        public ActionResult Edit(int id)
+        public async Task<ActionResult> Edit(int id)
         {
-            return View();
+            return View(await universityRepository.GetByIdAsync(id));
         }
 
         // POST: UniversityController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public async Task<ActionResult> Edit(University university, IFormCollection collection)
         {
             try
             {
+                await universityRepository.UpdateAsync(university);
                 return RedirectToAction(nameof(Index));
             }
             catch
