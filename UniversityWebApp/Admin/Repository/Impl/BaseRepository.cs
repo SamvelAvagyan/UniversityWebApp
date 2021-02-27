@@ -27,6 +27,11 @@ namespace Repository.Impl
             await dbContext.SaveChangesAsync();
         }
 
+        public IQueryable<T> GetActives()
+        {
+            return dbContext.Set<T>().Where(t => t.Active);
+        }
+
         public async Task<IQueryable<T>> GetActivesAsync()
         {
             return await Task.Run(() =>

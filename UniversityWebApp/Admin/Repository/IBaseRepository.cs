@@ -7,6 +7,7 @@ namespace Repository
     {
         Task<IQueryable<T>> GetAllAsync();
         Task<IQueryable<T>> GetActivesAsync();
+        IQueryable<T> GetActives();
         Task<T> GetByIdAsync(int id);
         Task AddAsync(T model);
         Task DeleteAsync(int id);

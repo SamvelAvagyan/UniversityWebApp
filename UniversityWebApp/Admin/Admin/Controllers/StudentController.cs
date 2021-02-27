@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Repository;
 using Repository.Models;
+using System;
 using System.Threading.Tasks;
 
 namespace Admin.Controllers
@@ -9,10 +11,12 @@ namespace Admin.Controllers
     public class StudentController : Controller
     {
         private readonly IStudentRepository studentRepository;
+        private readonly IUniversityRepository universityRepository;
 
-        public StudentController(IStudentRepository studentRepository)
+        public StudentController(IStudentRepository studentRepository, IUniversityRepository universityRepository)
         {
             this.studentRepository = studentRepository;
+            this.universityRepository = universityRepository;
         }
 
         // GET: StudentController
@@ -30,6 +34,7 @@ namespace Admin.Controllers
         // GET: StudentController/Create
         public ActionResult Create()
         {
+            ViewBag.Universities = new SelectList(universityRepository.GetActives(), "Id", "Name");
             return View();
         }
 
@@ -43,8 +48,9 @@ namespace Admin.Controllers
                 await studentRepository.AddAsync(student);
                 return RedirectToAction(nameof(Index));
             }
-            catch
+            catch(Exception e)
             {
+                Console.WriteLine(e.Message);
                 return View();
             }
         }
