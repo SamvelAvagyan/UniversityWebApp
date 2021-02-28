@@ -27,6 +27,13 @@
                 <input asp-for="Mark" class="form-control" />
                 <span asp-validation-for="Mark" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <label>Universities :</label>
+                <select name="UniversityId" asp-for="UniversityId" class="formcontrol" asp-items="ViewBag.Universities">
+                    <option value="@ViewBag.Universities"></option>
+                </select>
+                <span asp-validation-for="UniversityId" class="text-danger"></span>
+            </div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

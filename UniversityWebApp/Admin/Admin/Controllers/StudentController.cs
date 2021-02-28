@@ -58,6 +58,7 @@ namespace Admin.Controllers
         // GET: StudentController/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
+            ViewBag.Universities = new SelectList(universityRepository.GetActives(), "Id", "Name");
             return View(await studentRepository.GetByIdAsync(id));
         }
 
