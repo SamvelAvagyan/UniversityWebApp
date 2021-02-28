@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Repository;
 using Repository.Models;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Admin.Controllers
@@ -20,9 +21,30 @@ namespace Admin.Controllers
         }
 
         // GET: StudentController
-        public async Task<ActionResult> Index()
+        public async Task<ActionResult> Index(string sortOrder)
         {
-            return View(await studentRepository.GetActivesAsync());
+            ViewBag.IdSortParm = sortOrder == "Id" ? "Id" : "Id";
+            ViewBag.NameSortParm = sortOrder == "Name" ? "Name" : "Name";
+            ViewBag.MarkSortParm = sortOrder == "Mark" ? "Mark" : "Mark";
+            var students = await studentRepository.GetActivesAsync(); 
+
+            switch (sortOrder)
+            {
+                case "Mark":
+                    students = students.OrderByDescending(s => s.Mark);
+                    break;
+                case "Name":
+                    students = students.OrderBy(s => s.Name);
+                    break;
+                case "Id":
+                    students = students.OrderBy(s => s.Id);
+                    break;
+                default:
+                    students = students.OrderBy(s => s.Surname);
+                    break;
+            }
+
+            return View(students.ToList());
         }
 
         // GET: StudentController/Details/5
@@ -58,7 +80,6 @@ namespace Admin.Controllers
         // GET: StudentController/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
-            ViewBag.Universities = new SelectList(universityRepository.GetActives(), "Id", "Name");
             return View(await studentRepository.GetByIdAsync(id));
         }
 
