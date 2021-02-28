@@ -21,12 +21,17 @@ namespace Admin.Controllers
         }
 
         // GET: StudentController
-        public async Task<ActionResult> Index(string sortOrder)
+        public async Task<ActionResult> Index(string sortOrder, string searchString)
         {
             ViewBag.IdSortParm = sortOrder == "Id" ? "Id" : "Id";
             ViewBag.NameSortParm = sortOrder == "Name" ? "Name" : "Name";
             ViewBag.MarkSortParm = sortOrder == "Mark" ? "Mark" : "Mark";
-            var students = await studentRepository.GetActivesAsync(); 
+            var students = await studentRepository.GetActivesAsync();
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                students = students.Where(s => s.Name.Contains(searchString));
+            }
 
             switch (sortOrder)
             {
