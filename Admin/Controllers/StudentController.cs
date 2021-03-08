@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Repository;
 using Repository.Models;
 using System;
@@ -21,12 +22,23 @@ namespace Admin.Controllers
         }
 
         // GET: StudentController
-        public async Task<ActionResult> Index(string sortOrder, string searchString)
+        public async Task<ActionResult> Index(string sortOrder, string searchString, string currentFilter, int? pageNumber)
         {
+            ViewData["CurrentSort"] = sortOrder;
             ViewBag.IdSortParm = sortOrder == "Id" ? "Id" : "Id";
             ViewBag.NameSortParm = sortOrder == "Name" ? "Name" : "Name";
             ViewBag.MarkSortParm = sortOrder == "Mark" ? "Mark" : "Mark";
             var students = await studentRepository.GetActivesAsync();
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
 
             if (!String.IsNullOrEmpty(searchString))
             {
@@ -49,7 +61,8 @@ namespace Admin.Controllers
                     break;
             }
 
-            return View(students.ToList());
+            int pageSize = 3;
+            return View(await PaginatedList<Student>.CreateAsync(students.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         // GET: StudentController/Details/5
