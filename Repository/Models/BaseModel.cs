@@ -2,7 +2,7 @@
 
 namespace Repository.Models
 {
-    public class BaseModel
+    public abstract class BaseModel
     {
         public int Id { get; set; }
         public DateTime CreatedOn { get; set; }
